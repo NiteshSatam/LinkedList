@@ -117,6 +117,21 @@ public class LinkedList {
 		}
 	}
 
+	public void deleteLast() {
+		if (head == null)
+			System.out.println("No elements to delete");
+		else if (head.next == null)
+			head = null;
+		else {
+			Node temp = head;
+			while (temp.next.next != null) {
+				temp = temp.next;
+			}
+			temp.next = null;
+		}
+
+	}
+
 	public void display() {
 
 		if (head == null) {
