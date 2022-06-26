@@ -132,6 +132,31 @@ public class LinkedList {
 
 	}
 
+	public void search(Object searchData) {
+		if (head.data == searchData)
+			System.out.println(searchData + " is Found");
+		else {
+			Node temp = head;
+
+			boolean isFound = false;
+
+			while (temp != null) {
+				if (temp.data == searchData) {
+					isFound = true;
+					break;
+				}
+				temp = temp.next;
+
+			}
+
+			if (isFound == true)
+				System.out.println(searchData + " is Found");
+			else
+				System.out.println(searchData + " is not Found");
+
+		}
+	}
+
 	public void display() {
 
 		if (head == null) {

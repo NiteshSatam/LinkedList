@@ -8,7 +8,8 @@ public class LinkedListRunner {
 		linkedList.addFirst(56);
 		linkedList.insertAtSpecificIndex(1, 30);
 		linkedList.deleteLast();
-		linkedList.display();
+		linkedList.search(30);
+		//linkedList.display();
 
 	}
 
