@@ -157,6 +157,41 @@ public class LinkedList {
 		}
 	}
 
+	public void searchAndInsert(Object searchData, Object data) {
+
+		Node newNode = new Node(data);
+
+		if (head.data == searchData) {
+			// head==>1==>2==>3==>4
+			System.out.println(searchData + " is Found");
+			newNode.next = head.next;
+			head.next = newNode;
+
+		} else {
+			Node temp = head;
+
+			boolean isFound = false;
+
+			while (temp != null) {
+				if (temp.data == searchData) {
+					isFound = true;
+					break;
+				}
+
+				temp = temp.next;
+			}
+			// 1=>2=>3=>4
+
+			if (isFound == true) {
+				newNode.next = temp.next;
+				temp.next = newNode;
+				System.out.println(searchData + " is Found");
+			} else
+				System.out.println(searchData + " is not found..");
+		}
+
+	}
+
 	public void display() {
 
 		if (head == null) {
